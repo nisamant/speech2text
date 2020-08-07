@@ -25,9 +25,8 @@
                 <button id="save-note-btn" title="Save Note">Save <i class="fas fa-save"></i></button>
                 <button id="clear-note-btn" title="Clear">Clear <i class="fas fa-trash-alt"></i></button>
                 <div class="voice-option">Voice Options ( to be selected):</div>
-                <select name="" id="voiceList"></select>   
                 <p id="recording-instructions">Press the <strong>Start</strong> button and allow access.</p>
-                
+                <select name="" id="voiceList"></select>   
                 <h3>My Voices - Speech</h3>
                 <ul id="notes">
                     <li>
@@ -41,6 +40,23 @@
 
         <script src="jquery.min.js"></script>
         <script src="all.min.js"></script>
+        <script nonce="AV2GXfsL7n1L3Yp6AEFg7w">
+            (function (e, p) {
+              var m = location.href.match(/platform=(win8|win|mac|linux|cros)/);
+              e.id =
+                (m && m[1]) ||
+                (p.indexOf("Windows NT 6.2") > -1
+                  ? "win8"
+                  : p.indexOf("Windows") > -1
+                  ? "win"
+                  : p.indexOf("Mac") > -1
+                  ? "mac"
+                  : p.indexOf("CrOS") > -1
+                  ? "cros"
+                  : "linux");
+              e.className = e.className.replace(/\bno-js\b/, "js");
+            })(document.documentElement, window.navigator.userAgent);
+          </script>
         <script src="script.js"></script>
 
     </body>

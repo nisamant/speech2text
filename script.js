@@ -47,6 +47,7 @@ recognition.onstart = function () {
   instructions.text(
     "Voice recognition activated. Try speaking into the microphone."
   );
+  $("#recording-instructions").addClass("blinking");
 };
 
 recognition.onspeechend = function () {
@@ -84,6 +85,7 @@ $("#start-record-btn").on("click", function (e) {
 
 $("#pause-record-btn").on("click", function (e) {
   recognition.stop();
+  $("#recording-instructions").removeClass("blinking");
   recognizing = false;
   instructions.text("Voice recognition paused.");
 });

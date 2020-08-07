@@ -2117,3 +2117,24 @@ table.table-hoverable tbody tr:hover td {
   --component-padding-x: 1rem;
   --component-padding-y: 1rem;
 }
+
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #000;
+  }
+  49% {
+    color: red;
+  }
+  50% {
+    color: green;
+  }
+  99% {
+    color: yellow;
+  }
+  100% {
+    color: orange;
+  }
+}
