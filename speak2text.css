@@ -911,7 +911,7 @@ input[type="week"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--input-border-color-focus);
+  border-color: var(--button-bg-color);
 }
 select {
   position: relative;
