@@ -1,7 +1,9 @@
 try {
   var SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
-  var recognition = new SpeechRecognition();
+  var recognition = new webkitSpeechRecognition();
+  recognition.continuous = true;
+  //recognition.interimResults = true;
   var voiceList = document.querySelector("#voiceList");
   var voices = [];
   GetVoices();
@@ -23,7 +25,7 @@ var noteContent = "";
 var notes = getAllNotes();
 renderNotes(notes);
 
-recognition.continuous = true;
+//recognition.continuous = true;
 
 recognition.onresult = function (event) {
   var current = event.resultIndex;
@@ -41,6 +43,7 @@ recognition.onresult = function (event) {
 };
 
 recognition.onstart = function () {
+  recognizing = true;
   instructions.text(
     "Voice recognition activated. Try speaking into the microphone."
   );
@@ -81,6 +84,7 @@ $("#start-record-btn").on("click", function (e) {
 
 $("#pause-record-btn").on("click", function (e) {
   recognition.stop();
+  recognizing = false;
   instructions.text("Voice recognition paused.");
 });
 

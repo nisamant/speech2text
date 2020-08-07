@@ -922,6 +922,7 @@ select {
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 1.5rem;
+  margin-top: 20px;
 }
 textarea {
   height: auto;
