@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Voice Controlled Web App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="all.min.css">
+        <link rel="stylesheet" href="speak2text.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>Speech to Text</h1>
+            
+            <div class="app"> 
+                <h3>Add New Speech <i class="far fa-comments"></i></h3>
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="Create a new speech by typing or using voice." rows="6"></textarea>
+                </div>         
+                <button id="start-record-btn" title="Start Recording">Start <i class="fas fa-hourglass-start"></i></button>
+                <button id="pause-record-btn" title="Pause Recording">Stop <i class="far fa-stop-circle"></i></button>
+                <button id="save-note-btn" title="Save Note">Save <i class="fas fa-save"></i></button>
+                <button id="clear-note-btn" title="Clear">Clear <i class="fas fa-trash-alt"></i></button>
+                <div class="voice-option">Voice Options ( to be selected):</div>
+                <select name="" id="voiceList"></select>   
+                <p id="recording-instructions">Press the <strong>Start</strong> button and allow access.</p>
+                
+                <h3>My Voices - Speech</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any speech.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script src="jquery.min.js"></script>
+        <script src="all.min.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
+
+
