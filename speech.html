@@ -404,8 +404,8 @@
         upgrade();
       } else {
         start_button.style.display = "inline-block";
-        var speech = SpeechRecognition || webkitSpeechRecognition;
-        var recognition = new speech();
+
+        var recognition = new webkitSpeechRecognition();
         recognition.continuous = true;
         recognition.interimResults = true;
 
