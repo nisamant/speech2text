@@ -9616,3 +9616,6 @@ html[dir="rtl"] .promo-badge {
 ul.data-instances {
   margin-bottom: 0 !important;
 }
+.heading-text {
+  font-weight: bold;
+}
