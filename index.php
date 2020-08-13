@@ -1,1 +1,1 @@
-<?php include_once("text2Speech.html"); ?>
+<?php include_once("spch.html"); ?>
