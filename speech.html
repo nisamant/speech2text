@@ -404,8 +404,10 @@
         upgrade();
       } else {
         start_button.style.display = "inline-block";
+        var SpeechRecognition =
+          window.SpeechRecognition || window.webkitSpeechRecognition || null;
 
-        var recognition = new webkitSpeechRecognition();
+        var recognition = new SpeechRecognition();
         recognition.continuous = true;
         recognition.interimResults = true;
 
