@@ -1,1 +1,1 @@
-<?php include_once("simplerecognition.html"); ?>
+<?php include_once("speech.html"); ?>
